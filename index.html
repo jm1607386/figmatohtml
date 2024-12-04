@@ -1,402 +1,303 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="overflow-x-hidden">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
-    <link rel="stylesheet" href="./test.css">
-    <title>Safe Home Pros</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="./output.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-lignt">
-        <a class="navbar-brand" href="#">Logo</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link active" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-            </ul>
-            <button class="btn btn-primary btn-logo ml-auto">Speak With An Expert</button>
-        </div>
-    </nav>
-
-    <div>
-        <div class="top-section">
-            <div class="top-left">
-                <div class="text1">Help Protect Your Home With A New Security System</div>
-                <div class="text2">Quick and easy. Get matched with the best Home Security company in your area.</div>
-            </div>
-            <div class="top-right">
-                <div class="card main-card">
-                    <div class="card-header">
-                        <div id="indicatorList" class="indicator-list"></div>
-                    </div>
-                    <div class="card-body">
-                        <form>
-                            <div class="question-div-1  active-question">
-                                <div class="q-title">1. What type of property is this system for?</div>
-                                <div class="q-div">
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="form-check form-group">
-                                                <input class="form-check-input" id="iq11" type="radio" name="q-1"
-                                                    value="Owned" checked />
-                                                <label class="form-check-label" for="iq11">Owned</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="form-check form-group">
-                                                <input class="form-check-input" type="radio" name="q-1" value="Rented"
-                                                    id="iq12" />
-                                                <label class="form-check-label" for="iq12">Rented</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question-div-2 question">
-                                <div class="q-title">2. What is your zip code?</div>
-                                <div class="q-div">
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="input-group form-group">
-                                                <span class="input-group-addon">
-                                                    <img src="./assets/Location Icon.svg" />
-                                                </span>
-                                                <input class="q-input form-control"
-                                                    placeholder="Enter your Zip code number" id="input_zip" required />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question-div-3 question">
-                                <div class="q-title">3. What is your installation preference?</div>
-                                <div class="q-div">
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="form-check form-group">
-                                                <input class="form-check-input" id="iq31" type="radio" name="q-3"
-                                                    value="professional" checked />
-                                                <label class="form-check-label" for="iq31">Professional
-                                                    Installation</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="form-check form-group">
-                                                <input class="form-check-input" type="radio" name="q-3" value="self"
-                                                    id="iq32" />
-                                                <label class="form-check-label" for="iq32">Self
-                                                    Installation</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="form-check form-group">
-                                                <input class="form-check-input" type="radio" name="q-3" value="none"
-                                                    id="iq33" />
-                                                <label class="form-check-label" for="iq33">No Preferences</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question-div-4 question">
-                                <div class="q-title">4. What home security features would you like to have? <p
-                                        class="d-inline">(Select answers
-                                        that are applicable to you.)</p>
-                                </div>
-                                <div class="q-div">
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="form-check form-group">
-                                                <input class="form-check-input" id="iq41" type="checkbox" name="q-4"
-                                                    value="Cameras" />
-                                                <label class="form-check-label" for="iq41">Cameras</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="form-check form-group">
-                                                <input class="form-check-input" id="iq42" type="checkbox" name="q-4"
-                                                    value="Motion Sensors" />
-                                                <label class="form-check-label" for="iq42">Motion Sensors</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="form-check form-group">
-                                                <input class="form-check-input" type="checkbox" name="q-4" value="Glass Break Sensors"
-                                                    id="iq43" />
-                                                <label class="form-check-label" for="iq43">Glass Break
-                                                    Sensors</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="form-check form-group">
-                                                <input class="form-check-input" type="checkbox" name="q-4" value="Doorbell Cameras"
-                                                    id="iq44" />
-                                                <label class="form-check-label" for="iq44">Doorbell
-                                                    Cameras</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question-div-5 question">
-                                <div class="q-title">5. What kind of System do you need?</div>
-                                <div class="q-div">
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="form-check form-group">
-                                                <input class="form-check-input" type="radio" name="q-5" value="burglar"
-                                                    id="iq51" checked />
-                                                <label class="form-check-label" for="iq51">Burglar/Intrusion</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="form-check form-group">
-                                                <input class="form-check-input" type="radio" name="q-5" value="fire"
-                                                    id="iq52" />
-                                                <label class="form-check-label" for="iq52">Fire Detection</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="form-check form-group">
-                                                <input class="form-check-input" type="radio" name="q-5" value="both"
-                                                    id="iq53" />
-                                                <label class="form-check-label" for="iq53">Both Burglar & Fire
-                                                    Detection</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question-div-6 question">
-                                <div class="q-title">6. How many entrances exist?</div>
-                                <div class="q-div">
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="form-check form-group">
-                                                <input class="form-check-input" type="radio" name="q-6" value="1"
-                                                    id="iq61" checked />
-                                                <label class="form-check-label" for="iq61">1</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="form-check form-group">
-                                                <input class="form-check-input" type="radio" name="q-6" value="2-4"
-                                                    id="iq62" />
-                                                <label class="form-check-label" for="iq62">2 - 4</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="form-check form-group">
-                                                <input class="form-check-input" type="radio" name="q-6" value="5"
-                                                    id="iq63" />
-                                                <label class="form-check-label" for="iq63">5</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="form-check form-group">
-                                                <input class="form-check-input" type="radio" name="q-6" value="6+"
-                                                    id="iq64" />
-                                                <label class="form-check-label" for="iq64">More than 5</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question-div-7 question">
-                                <div class="q-title">7. What is your address?</div>
-                                <div class="q-div">
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><img
-                                                        src="./assets/Location Icon.svg" /></span>
-                                                <input class="q-input form-control" placeholder="Enter your address" id="input_address" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="question-div-8 question">
-                                <div class="q-title">8. Please fill in your details.</div>
-                                <div class="q-div">
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><img
-                                                        src="./assets/User Icon.svg" /></span>
-                                                <input id="input_first_name" type="text" class="q-input form-control"
-                                                    placeholder="First Name" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><img
-                                                        src="./assets/User Icon.svg" /></span>
-                                                <input id="input_last_name" type="text" class="q-input form-control"
-                                                    placeholder="Last Name" required />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><img
-                                                        src="./assets/Email Icon.svg" /></span>
-                                                <input id="input_email" class="q-input form-control"
-                                                    placeholder="Email Address" required />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card sub-card">
-                                        <div class="card-body">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><img
-                                                        src="./assets/Phone Icon.svg" /></span>
-                                                <input id="input_phone" class="q-input form-control"
-                                                    placeholder="Phone Number" required />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col d-flex justify-content-center">
-                                <button type="button" class="btn btn-prev" onclick="onPrevQuestion()" disabled>
-                                    <img src="./assets/Back Icon.svg" />
-                                    Go Back
-                                </button>
-                            </div>
-                            <div class="col d-flex justify-content-center">
-                                <button type="submit" class="btn btn-next" onclick="onNextQuestion()">
-                                    Next Question <img src="./assets/Next Icon.svg" />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+<body class="bg-[#282828] overflow-x-hidden w-full">
+  <nav class=" bg-[#282828] pl-[112px] pr-[49px] max-lg:pr-[20px] max-lg:pl-[20px]">
+    <div class="flex items-center justify-between mx-auto py-4 max-md:flex-col">
+      <a href="#" class="">
+        <img src="./img/log.png" class="w-[240px] h-[43px]" alt="Flowbite Logo" />
+      </a>
+      <div class="space-x-[58px] flex flex-row items-center max-lg:space-x-[30px] max-md:flex-col">
+        <div class="">
+          <ul class="flex flex-row">
+            <li>
+              <div class="flex  flex-col overflow-hidden py-6">
+                <div class="relative flex m-auto h-[33.91px] w-[103px] overflow-hidden ">
+                  <div class="absolute bottom-0 right-0 m-auto h-[17px] w-[14px] bg-[#CFFF0B] "></div>
+                  <div
+                    class="top-0 z-30 left-0 m-auto  h-[31.91px] w-[100px] bg-[#282828] flex justify-end items-end pr-[18px] pb-[10px]">
+                    <a href="#" class="font-Mono text-500 text-[20px] leading-[21.23px] text-[#D9D9D9] tracking-widest">Pricing</a>
+                  </div>
                 </div>
-            </div>
-        </div>
-        <div class="middle-section">
-            <div class="title">How It Works</div>
-            <div class="sub-title">Safe Home Pros services hundreds of brands and provides trusted
-                information for millions of
-                individuals
-                across the United States</div>
-            <div class="d-flex mt-5 items">
-                <div class="item">
-                    <img src="./assets/Speaker Icon.svg" />
-                    <p class="item-text">Strengthen your consumer awareness</p>
+              </div>
+            </li>
+            <li>
+              <div class="flex  flex-col overflow-hidden py-6">
+                <div class="relative flex m-auto h-[33.91px] w-[103px] overflow-hidden ">
+                  <div class="absolute bottom-0 right-0 m-auto h-[17px] w-[14px] bg-[#CFFF0B] "></div>
+                  <div
+                    class="top-0 z-30 left-0 m-auto  h-[31.91px] w-[100px] bg-[#282828] flex justify-end items-end pr-[18px] pb-[10px]">
+                    <a href="#" class="font-Mono text-500 text-[20px] leading-[21.23px] text-[#D9D9D9] tracking-wider">FAQ</a>
+                  </div>
                 </div>
-                <div class="item">
-                    <img src="./assets/People Icon.svg" />
-                    <p class="item-text">Easily compare competitors</p>
-                </div>
-                <div class="item">
-                    <img src="./assets/Money Bag Icon.svg" />
-                    <p class="item-text">Find the best rates for your financial needs.</p>
-                </div>
-            </div>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="bottom-section">
-            <div class="pros-content">
-                <p class="title">
-                    Safe Home Pros
-                </p>
-                <p class="content">
-                    Safe Home Pros offers ranking and reviews for the top companies in many verticals across different
-                    industries in the United States. We strive to remain both objective and informative, with the goal
-                    of
-                    giving our users the best experience. The opinions and the prices we represent on our site(s) are
-                    subject to change without notice. We are an independent, advertising-supported comparison service.
-                    The
-                    offers that appear on this site are from companies that compensate us. This compensation may impact
-                    how
-                    and where products appear on this site, including, for example, the order in which they may appear
-                    within the listing categories.
-                </p>
-            </div>
-            <div class="subscribe">
-                <h5 class="mb-5">Subscribe</h5>
-                <form>
-                    <div class="form-group">
-                        <input type="input" class="form-control" id="firstNameInput" placeholder="First Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="emailInput" placeholder="Email" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-subscribe">SUBSCRIBE</button>
-                </form>
-            </div>
-            <div class="company">
-                <h5 class="mb-5">Company</h5>
-                <p class="cursor-pointer">About Us</p>
-                <p>Careers</p>
-                <p>FAQs</p>
-                <p>Teams</p>
-                <p>Contact Us</p>
-            </div>
+        <div class="space-x-3 max-lg:space-x-[30px]">
+          <button type="button"
+            class="font-Mono font-bold  text-[#242424] text-500 text-[20px] leading-[21.33px] bg-gradient-to-r from-[#FF4089] to-[#CFFF0B] flex space-x-6 items-center py-[14px] px-[30px] rounded-[34px]">
+            <p>Get started</p>
+            <img src="./img/arrow_slash.svg" class="w-[17.6px] h-[17.6px]" alt="Flowbite Logo" />
+          </button>
         </div>
+      </div>
     </div>
-    <footer class="footer">
-        <div class="d-flex justify-content-between align-items-center px-3">
-            <p>Copyright &copy; 2023 Safe Home Pros</p>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-                <li class="list-inline-item"><a href="#">Terms of Use</a></li>
-                <li class="list-inline-item"><a href="#">Sales and Refunds</a></li>
-                <li class="list-inline-item"><a href="#">Legal</a></li>
-            </ul>
+  </nav>
+  <div class=" grid grid-cols-6 pt-[54px] pl-[112px] pr-[49px] justify-start max-md:pl-[12px] max-md:pr-[12px]">
+    <div class="col-span-3  max-xl:col-span-6  max-xl:pb-[60px] max-xl:flex max-xl:justify-center max-sm:col-span-6">
+      <div class="w-[475.5px] max-md:w-[400px]">
+        <div class="space-y-[30px]">
+          <p class="font-inter text-[65px] text-400  leading-[69.01px] text-white">Refresh your
+            property
+            listings and elevate your real estate social reach.</p>
+          <p class="font-Mono text-500 text-[20px] leading-[21.23px] text-[#CFFF0B] tracking-widest">From coming soon to sold!</p>
         </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="./test.js"></script>
+        <button type="button"
+          class="mt-[60px] font-Mono text-[#242424] text-500 text-[20px] font-bold tracking-wide leading-[21.33px] bg-gradient-to-r from-[#FF4089] to-[#CFFF0B] flex space-x-6 items-center py-[14px] px-[25.86px] rounded-[34px]">
+          <p>Buy a video pack</p>
+          <img src="./img/arrow_slash.svg" class="w-[17.6px] h-[17.6px]" alt="Flowbite Logo" />
+        </button>
+        <div class="pl-[10px] mt-[30px] space-y-[30px] pr-[180px]">
+          <p class="font-Mono text-400 text-[20px] leading-[21.23px] text-[#1EEEF9] pr-[30px]">Need a custom branded
+            video
+            pack for
+            your brokerage?</p>
+          <div class="flex flex-row space-x-6 ">
+            <div class="space-y-1">
+              <div class="flex flex-row space-x-3">
+                <p class="font-Mono text-400 text-[20px] leading-[21.23px] text-white">$XXXX</p>
+                <p class="font-Mono text-400 text-[20px] leading-[21.23px] text-[#1EEEF9]"> + </p>
+                <p class="font-Mono text-400 text-[20px] leading-[21.23px] text-white">$XX/month</p>
+              </div>
+              <p class="font-Mono text-400 text-[20px] leading-[21.23px] text-white"> subscription</p>
+            </div>
+            <button type="button"
+              class=" bg-gradient-to-r from-[#1EEEF9] to-[#CFFF0B] flex justify-center items-center w-[44px] h-[46px] rounded-full">
+              <img src="./img/arrow_slash.svg" class="w-[17.6px] h-[17.6px]" alt="Flowbite Logo" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative col-span-2 flex justify-end max-xl:col-span-4 max-sm:col-span-6">
+      <div class=" flex flex-col w-[380px] h-[794px] items-center">
+        <img src="./img/landingpage.png" class=" w-[380x] h-[676px] rounded-[46px]" alt="landingimage" />
+        <div class="absolute flex flex-col justify-center items-center bottom-0 space-y-[22.5px]">
+          <div class="flex flex-row space-x-[32px] ">
+            <button type="button" class="flex justify-center items-center rounded-full">
+              <img src="./img/back_arrow.svg" class="w-[51px] h-[51px]" alt="Flowbite Logo" />
+            </button>
+            <button type="button" class="flex justify-center items-center rounded-full">
+              <img src="./img/forward_arrow.svg" class="w-[51px] h-[51px]" alt="Flowbite Logo" />
+            </button>
+          </div>
+          <p class="font-Mono text-500 text-[14px] leading-[14.86px] text-[#FFFFFF] tracking-[.35em]"> SELECT A THEME
+          </p>
+        </div>
+        </p>
+      </div>
+      <div
+        class="absolute bg-[#282828] w-[210px] h-[233px] bottom-[200px] left-[70px] pl-[33px] pt-[35px] pb-[6px] pr-[11px] rounded-[30px] max-2xl:left-[-120px] max-xl:left-[30px] max-lg:left-[-120px]">
+        <p class="font-Mono text-500 text-[14px] leading-[27.6px] text-[#D9D9D9] tracking-[.35em]">YOU GET</p>
+        <p class="font-Mono text-500 text-[26px] leading-[27.6px] text-[#CFFF0B] "> 7 custom listing videos per property
+          for
+          <span class="font-Mono text-500 text-[26px] leading-[32.02px] text-[#D9D9D9]">$XXX</span>
+        </p>
+      </div>
+    </div>
+    <div class="col-span-1 pr-[10px] pl-[70px] space-y-[40px] py-[40px] max-xl:pl-[40px] max-xl:col-span-2 max-sm:col-span-6">
+      <div class="">
+        <p class="font-Mono text-400 text-[60px] leading-[63.7px] text-[#CFFF0B]">66%</p>
+        <p class="font-Mono text-500 text-[22px] leading-[26px] text-[#D9D9D9]"> say short-form video is the most
+          engaging
+        </p>
+      </div>
+      <div class="">
+        <p class="font-mono text-400 text-[60px] leading-[63.7px] text-[#CFFF0B]">80%</p>
+        <p class="font-Mono text-500 text-[22px] leading-[26px] text-[#D9D9D9]"> of users engage with videos over static
+          stills </p>
+      </div>
+    </div>
+  </div>
+  <div class=" pl-[59px] pr-[193px] grid grid-cols-5 max-lg:pt-[30px] max-xl:pr-[20px] max-xl:pl-[20px]">
+    <div class="col-span-1">
+      <div class="relative">
+        <img src="./img/house.webp"
+          class="absolute inline-block  w-[236px] h-[236px] rounded-[100%] left-8 max-xl:w-auto max-xl:h-auto"
+          alt="landingimage" />
+        <img src="./img/transparent_circle.svg" class="absolute z-20 top-8" alt="transparent_circle">
+      </div>
+    </div>
+    <div class="col-span-4">
+      <div class="pl-[60px] pt-[20px]">
+        <div class="flex flex-row space-x-[28px] pl-[10px]">
+          <img src="./img/downloda_button.svg" class="" alt="download_button">
+          <p class="font-Mono text-400 text-[35px] leading-[37.16px] text-[#FFFFFF] ">what’s included</p>
+        </div>
+        <div class="pt-[49px]">
+          <p class="font-Mono text-500 text-[20px] leading-[26.04px] text-white tracking-widest">We've got everything
+            covered. Starting from your
+            <span class="text-[#CFFF0B] font-Mono text-500 text-[20px] leading-[26.04px]">coming soon</span> and ending
+            with <span class="text-[#CFFF0B] font-Mono text-500 text-[20px] leading-[26.04px]">just sold</span>, you
+            select a theme, colors, and music and we create your (7)
+            personalized video templates in square and vertical formats. They're all set to be easily uploaded to your
+            social accounts within 24 hours.<span
+              class="text-[#CFFF0B] font-Mono text-500 text-[20px] leading-[26.04px]"><br>It’s that easy!</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative pt-[40px]">
+    <div class="absolute top-[175px] w-full h-[2px] text-[#D9D9D9] max-lg:top-[178px] max-md:top-[192px]" style="background-image: url(./img/line.svg);">
+    </div>
+    <div class="pt-[70px] pl-[175px] pr-[90px] space-y-[40px] max-lg:pl-[75px] max-md:pl-[10px] max-md:pr-[10px]">
+      <div class="grid grid-cols-3">
+        <div class="col-span-1 border-t border-l border-left border-[#FFFFFF] pb-3"></div>
+        <div class="col-span-1 -mt-3">
+          <p class="font-Mono text-500 text-[14px] leading-[14.86px] tracking-widest flex justify-center text-white pl-[40px] ">7
+            PROPERTY JOURNEY VIDEOS</p>
+        </div>
+        <div class="col-span-1 border-t border-r border-[#FFFFFF] mr-[15px]"></div>
+      </div>
+      <div class="grid grid-cols-6">
+        <div class="col-span-1 flex flex-col justify-start space-y-[27px]">
+          <img src="./img/small_circle.svg" class=" w-[22px] h-[22px]" alt="small_circle" />
+          <p class="font-Mono text-400 text-[18px] leading-[19.11px] text-[#D9D9D9] ">Coming
+            <br> Soon
+          </p>
+        </div>
+
+        <div class="col-span-1 flex flex-col justify-start space-y-[27px]">
+          <img src="./img/small_circle.svg" class=" w-[22px] h-[22px]" alt="small_circle" />
+          <p class="font-Mono text-400 text-[18px] leading-[19.11px] text-[#D9D9D9] ">Just
+            <br>Listed
+          </p>
+        </div>
+
+        <div class="col-span-1 flex flex-col justify-start space-y-[27px]">
+          <img src="./img/small_circle.svg" class=" w-[22px] h-[22px]" alt="small_circle" />
+          <p class="font-Mono text-400 text-[18px] leading-[19.11px] text-[#D9D9D9] ">For
+            <br>Sale
+          </p>
+        </div>
+
+        <div class="col-span-1 flex flex-col justify-start space-y-[27px]">
+          <img src="./img/small_circle.svg" class=" w-[22px] h-[22px]" alt="small_circle" />
+          <p class="font-Mono text-400 text-[18px] leading-[19.11px] text-[#D9D9D9] ">Open
+            <br>House
+          </p>
+        </div>
+
+        <div class="col-span-1 flex flex-col justify-start space-y-[27px]">
+          <img src="./img/small_circle.svg" class=" w-[22px] h-[22px]" alt="small_circle" />
+          <p class="font-Mono text-400 text-[18px] leading-[19.11px] text-[#D9D9D9] ">Under
+            <br>Contract
+          </p>
+        </div>
+
+        <div class="col-span-1 flex items-center justify-between flex-row">
+          <div class="space-y-[27px]"> <img src="./img/small_circle.svg" class=" w-[22px] h-[22px]"
+              alt="small_circle" />
+            <p class="font-Mono text-400 text-[18px] leading-[19.11px] text-[#D9D9D9] ">Just
+              <br>Sold
+            </p>
+          </div>
+          <div class="space-y-[27px]"><img src="./img/small_circle.svg" class=" w-[22px] h-[22px]" alt="small_circle" />
+            <p class="font-Mono text-400 text-[18px] leading-[19.11px] text-[#D9D9D9] ">Biz
+              <br>Card
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pl-[59px] pr-[193px] pt-[69px] max-2xl:pr-[20px] grid grid-cols-5 max-2xl:pl-[20px]">
+    <div class="col-span-1">
+      <div class="relative">
+        <img src="./img/client.webp"
+          class="absolute inline-block  w-[236px] h-[236px] rounded-[100%] left-7 max-xl:w-auto max-xl:h-auto"
+          alt="landingimage" />
+        <img src="./img/transparent_circle.svg" class="absolute z-20 top-7" alt="transparent_circle">
+      </div>
+    </div>
+    <div class="col-span-4">
+      <div class="pl-[60px] pt-[20px] max-2xl:pl-[30px]">
+        <div class="flex flex-row space-x-[28px] pl-[10px]">
+          <img src="./img/mobilephone.svg" class="" alt="download_button">
+          <p class="font-Mono text-400 text-[35px] leading-[37.16px] text-[#FFFFFF] ">how it works</p>
+        </div>
+        <div class="pt-[49px] space-y-[15px]">
+          <div class="flex items-center space-x-[21px] ">
+            <div
+              class=" !w-[35px] h-[35px] rounded-full bg-[#5E5E5E] flex justify-center items-center text-center text-white">
+              <p class=" font-Mono text-500 text-[16px] leading-[16.99px]">
+                1</p>
+            </div>
+            <p class="font-Mono text-500 text-[20px] leading-[26.04px] text-white tracking-widest" style="width: 90%;">Provide your listing
+              address and your details</p>
+          </div>
+          <div class="flex items-center space-x-[21px] ">
+            <p
+              class="flex justify-center items-center w-[35px] h-[35px] rounded-full bg-[#5E5E5E] text-center text-white font-Mono text-500 text-[16px] leading-[16.99px]">
+              2</p>
+            <p class="font-Mono text-500 text-[20px] leading-[26.04px] text-white tracking-widest"  style="width: 90%;">Pick a Theme + Colors
+              +
+              Music</p>
+          </div>
+          <div class="flex items-center space-x-[21px] ">
+            <p
+              class="flex justify-center items-center w-[35px] h-[35px] rounded-full bg-[#5E5E5E] text-center text-white font-Mono text-500 text-[16px] leading-[16.99px]">
+              3</p>
+            <p class="font-Mono text-500 text-[20px] leading-[26.04px] text-white tracking-widest"  style="width: 90%;">We'll build your
+              FreshListing</p>
+          </div>
+          <div class="flex items-center space-x-[21px] ">
+            <p
+              class="flex justify-center items-center w-[35px] h-[35px] rounded-full bg-[#5E5E5E] text-center text-white font-Mono text-500 text-[16px] leading-[16.99px]">
+              4</p>
+            <p class="font-Mono text-500 text-[20px] leading-[26.04px] text-white tracking-widest"  style="width: 90%;">Within 24 hours
+              you'll
+              receive an email & link to your assets</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pt-[71px] flex flex-col justify-center items-center">
+    <p class="font-Mono text-400 text-[35px] leading-[37.16px] text-white">refresh your listings
+    </p>
+    <button type="button"
+      class="mt-[30px] font-Mono font-bold text-[#242424] text-500 text-[20px] leading-[21.23px] bg-gradient-to-r from-[#FF4089] to-[#CFFF0B] flex space-x-6 items-center py-[14px] px-[26.4px] rounded-[34px]">
+      <p>7 videos for only $XXX</p>
+      <img src="./img/arrow_slash.svg" class="w-[17.6px] h-[17.6px]" alt="Flowbite Logo" />
+    </button>
+  </div>
+
+  <div class="pl-[112px] pr-[49px] flex justify-between pt-[84px] pb-[58px] max-md:pl-[10px] max-md:pr-[10px]">
+    <div class="space-x-[22.61px] flex items-center">
+      <img src="./img/footer_image.svg" class=" inline-block  w-[25.39px] h-[24.38px] " alt="footerimage" />
+      <p class="font-Mono text-400 text-[16px] leading-[39.47px] text-white">© 2024 Freshlistingco. All rights reserved
+      </p>
+    </div>
+    <p class="font-Mono text-400 text-[16px] leading-[39.47px] text-white">terms + legal
+    </p>
+
+  </div>
+
 </body>
 
 </html>

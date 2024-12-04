@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@layer components {
+    input[type="radio"]:checked + label #circle1 {
+       @apply bg-white; 
+    }
+
+    input[type="radio"]:checked + label #circle2 {
+        @apply bg-white; 
+    }
+
+    input[type="radio"]:checked + svg-icon path {
+        @apply fill:white; 
+    }
+
+}

@@ -1,0 +1,524 @@
+<!doctype html>
+<html class="overflow-x-hidden">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="./output.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-[#282828] overflow-x-hidden w-full">
+  <nav class=" bg-[#282828] pl-[112px] pr-[49px] max-lg:pr-[20px] max-lg:pl-[20px]">
+    <div class="flex items-center justify-between mx-auto py-4 max-md:flex-col">
+      <a href="#" class="">
+        <img src="./img/log.png" class="w-[240px] h-[43px]" alt="Flowbite Logo" />
+      </a>
+      <div class="space-x-[58px] flex flex-row items-center max-lg:space-x-[30px] max-md:flex-col">
+        <div class="">
+          <ul class="flex flex-row">
+            <li>
+              <div class="flex  flex-col overflow-hidden py-6">
+                <div class="relative flex m-auto h-[33.91px] w-[103px] overflow-hidden ">
+                  <div class="absolute bottom-0 right-0 m-auto h-[17px] w-[14px] bg-[#CFFF0B] "></div>
+                  <div
+                    class="top-0 z-30 left-0 m-auto  h-[31.91px] w-[100px] bg-[#282828] flex justify-end items-end pr-[18px] pb-[10px]">
+                    <a href="#"
+                      class="font-Mono text-500 text-[20px] leading-[21.23px] text-[#D9D9D9] tracking-widest">Pricing</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="flex  flex-col overflow-hidden py-6">
+                <div class="relative flex m-auto h-[33.91px] w-[103px] overflow-hidden ">
+                  <div class="absolute bottom-0 right-0 m-auto h-[17px] w-[14px] bg-[#CFFF0B] "></div>
+                  <div
+                    class="top-0 z-30 left-0 m-auto  h-[31.91px] w-[100px] bg-[#282828] flex justify-end items-end pr-[18px] pb-[10px]">
+                    <a href="#"
+                      class="font-Mono text-500 text-[20px] leading-[21.23px] text-[#D9D9D9] tracking-wider">FAQ</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="space-x-3 max-lg:space-x-[30px]">
+          <button type="button"
+            class="font-Mono font-bold text-[#242424] text-500 text-[20px] leading-[21.33px] bg-gradient-to-r from-[#FF4089] to-[#CFFF0B] flex space-x-6 items-center py-[14px] px-[30px] rounded-[34px]">
+            <p>Get started</p>
+            <img src="./img/arrow_slash.svg" class="w-[17.6px] h-[17.6px]" alt="Flowbite Logo" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="flex justify-center px-[10px]">
+    <div class="w-[672px] max-md:w-[410px]">
+      <p class="FONTSPRING DEMO - TT Firs Neue text-400 text-[45px] leading-[47.77px] text-center text-white">Let’s
+        refresh your listing
+      </p>
+      <div class="flex items-center space-x-[21px] pt-[58px] pb-[38px]">
+        <p
+          class="flex justify-center items-center w-[35px] h-[35px] rounded-full bg-[#CFFF0B] text-center text-[#1E1E1E] font-Mono text-500 text-[16px] leading-[16.99px]">
+          1</p>
+        <p class="font-Mono text-500 text-[20px] leading-[21.23px] text-white tracking-widest">Provide your property
+          details
+          below:</p>
+      </div>
+      <div class="pb-[14px]">
+        <input type="text" id="Street Address"
+          class="bg-[#4B4B4B] py-[18px] px-[52px] tracking-widest text-[#CFFF0B] text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder:text-[#CFFF0B] placeholder:text-400 placeholder:text-[20px] placeholder:leading-[21.23px] placeholder:font-Mono"
+          placeholder="Street Address" required />
+      </div>
+      <div>
+        <input type="text" id="Zipcode"
+          class="bg-[#4B4B4B] py-[18px] px-[52px] tracking-widest text-[#CFFF0B] text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder:text-[#CFFF0B] placeholder:text-400 placeholder:text-[20px] placeholder:leading-[21.23px] placeholder:font-Mono"
+          placeholder="Zipcode" required />
+      </div>
+      <div class="flex flex-row items-center pt-[14px] space-x-[31px]">
+
+        <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
+          class="font-Mono text-[20px] text-400 leading-[21.23px] tracking-widest py-[18px] pl-[52px] text-[#CFFF0B] bg-[#4B4B4B] focus:ring-4 focus:outline-none  rounded-full  text-center flex items-center "
+          type="button">
+          State
+          <svg class="w-[20px] h-[20px] ms-[50px] me-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+              d="m1 1 4 4 4-4" />
+          </svg>
+        </button>
+        <!-- Dropdown menu -->
+        <div id="dropdownDivider"
+          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+          <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDividerButton">
+            <li>
+              <a href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <input type="text" id="MLS #"
+            class="bg-[#4B4B4B] py-[18px] pl-[52px] tracking-widest text-[#CFFF0B] text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full placeholder:text-[#CFFF0B] placeholder:text-400 placeholder:text-[20px] placeholder:leading-[21.23px] placeholder:font-Mono"
+            placeholder="MLS #" required />
+        </div>
+      </div>
+
+      <div class="pt-[31px] grid grid-cols-3 max-md:grid-cols-4">
+        <div class=" col-span-1 space-y-[20px] max-md:col-span-2">
+          <div class="space-x-[14px] flex flex-row items-center ">
+            <img src="./img/bedroom.svg" class=" w-[42px] h-[32px]" alt="bedroom" />
+            <p class="font-Mono text-500 text-[20px] leading-[21.23px] tracking-widest text-[#FFFFFF] ">How many
+              <br>bedrooms?
+            </p>
+          </div>
+          <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider_1"
+            class="font-Mono text-[20px] text-400 leading-[21.23px] tracking-widest py-[18px] pl-[52px] text-[#CFFF0B] bg-[#4B4B4B] focus:ring-4 focus:outline-none  rounded-full  text-center flex items-center "
+            type="button">
+            1
+            <svg class="w-[20px] h-[20px] ms-[70px] me-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                d="m1 1 4 4 4-4" />
+            </svg>
+          </button>
+          <!-- Dropdown menu -->
+          <div id="dropdownDivider_1"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDividerButton">
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">1</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">3</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class=" col-span-1 space-y-[20px] max-md:col-span-2">
+          <div class="space-x-[14px] flex flex-row items-center ">
+            <img src="./img/bathroom.svg" class=" w-[33px] h-[35px]" alt="bathroom" />
+            <p class="font-Mono text-500 text-[20px] leading-[21.23px] tracking-widest text-[#FFFFFF] ">How many
+              <br>bathrooms?
+            </p>
+          </div>
+          <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider_2"
+            class="font-Mono text-[20px] text-400 leading-[21.23px] tracking-widest py-[18px] pl-[52px] text-[#CFFF0B] bg-[#4B4B4B] focus:ring-4 focus:outline-none  rounded-full  text-center flex items-center "
+            type="button">
+            1.5
+            <svg class="w-[20px] h-[20px] ms-[60px] me-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                d="m1 1 4 4 4-4" />
+            </svg>
+          </button>
+          <!-- Dropdown menu -->
+          <div id="dropdownDivider_2"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDividerButton">
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">1.5</a>
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">3.5</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-span-1 space-y-[20px] max-md:col-span-4">
+          <div class="space-x-[14px] flex flex-row items-center ">
+            <img src="./img/square_foot.svg" class=" w-[43px] h-[21px]" alt="bathroom" />
+            <p class="font-Mono text-500 text-[20px] leading-[21.23px] tracking-widest text-[#FFFFFF] ">How much
+              <br>Square-foot?
+            </p>
+          </div>
+
+          <div class="space-x-[40px] flex flex-row items-center px-[38px] py-[18px] bg-[#4B4B4B] rounded-full">
+            <p class="font-Mono text-500 text-[20px] leading-[21.23px] tracking-widest text-[#CFFF0B]">1500</p>
+            <p class="font-Mono text-500 text-[20px] leading-[21.23px] tracking-widest text-[#CFFF0B]">sqft</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pb-[29px] pt-[29px] pr-[83.96px] pl-[70px] flex flex-row items-center space-x-[8px] max-md:pl-[20px] max-md:pr-[20px] ">
+        <p class="font-Mono text-500 text-[20px] leading-[21.23px] tracking-widest text-[#FFFFFF] ">3 Keywords that
+          describe
+          this property (keep it short)</p>
+        <img src="./img/question.svg" class="w-[37.04px] h-[37.04px]" alt="question" />
+      </div>
+
+      <div class="w-full bg-[#4B4B4B] rounded-full">
+        <input type="text" id="MLS #"
+          class="bg-[#4B4B4B] py-[18px] pl-[38px] tracking-widest text-[#CFFF0B] text-400 rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full placeholder:text-[#CFFF0B] placeholder:text-400 placeholder:text-[20px] placeholder:leading-[21.23px] placeholder:font-Mono max-md:pl-[10px] max-md:pr-[10px]"
+          placeholder="ex. New Build, Great Schools, Desirable." required />
+      </div>
+
+      <div class="pb-[19px] pt-[29px] pr-[83.96px] pl-[70px] ">
+        <p class="font-Mono text-500 text-[20px] leading-[21.23px] tracking-widest text-[#FFFFFF] ">Pick 3 Real Estate
+          Specialities</p>
+      </div>
+
+
+
+      <div class="pt-[14px]">
+
+        <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider_3"
+          class=" font-Mono text-[20px] text-400 leading-[21.23px] tracking-widest py-[18px] pl-[52px] text-[#CFFF0B] bg-[#4B4B4B] focus:ring-4 focus:outline-none w-full  rounded-full  text-center flex items-center "
+          type="button">
+          <img src="./img/tick.svg" class="w-[34px] h-[34px] " alt="tick" />
+          <p class="pl-[16px]">Investment Properties</p>
+          <svg class="w-[20px] h-[20px] ms-[250px] me-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+              d="m1 1 4 4 4-4" />
+          </svg>
+        </button>
+        <!-- Dropdown menu -->
+        <div id="dropdownDivider_3"
+          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-[620px] dark:bg-gray-700 dark:divide-gray-600">
+          <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDividerButton">
+            <li>
+              <a href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard_1</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings_1</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings_1</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-[40px] grid grid-cols-2 gap-9 max-md:items-center max-md:justify-center">
+        <div class="col-span-1 space-y-[22px] max-md:col-span-2">
+          <div class="space-x-[15.98px] flex">
+            <p
+              class="-mt-1 flex justify-center items-center w-[35px] h-[35px] rounded-full bg-[#CFFF0B] text-center text-[#1E1E1E] font-Mono text-500 text-[16px] leading-[16.99px]">
+              2</p>
+            <p class=" font-Mono text-500 text-[20px] leading-[27.33px] text-white tracking-widest">
+              Upload (4) <br> featured images</p>
+          </div>
+          <div class="pt-[22px] ">
+            <div
+              class="relative h-[176px] bg-no-repeat rounded-[33px]" style="background-image: url(./img/dotted_border.svg);">
+              <p class="absolute top-[23px] left-[40px] font-Mono text-400 text-[18px] leading-[19.11px] text-[#CFFF0B] tracking-widest">Drop Images
+                here
+                or...
+              </p>
+              <button type="button"
+                class="absolute top-[74px] left-[50px] font-Mono font-bold text-[#242424] text-700 text-[20px] leading-[21.33px] bg-white flex space-x-[50px] items-center py-[18px] pl-[40px] pr-[25px] rounded-full">
+                <p>Upload</p>
+                <img src="./img/upload.svg" class="w-[19px] h-[22.93px]" alt="Upload" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-1 space-y-[22px] max-md:col-span-2">
+          <div class="space-x-[15.98px] flex">
+            <p class=" font-Mono text-500 text-[20px] leading-[27.33px] text-white ">
+              Upload a white transparent<br> Brokerage logo (PNG)</p>
+          </div>
+          <div class="pt-[22px]">
+            <div
+              class="relative h-[176px] bg-no-repeat rounded-[33px]" style="background-image: url(./img/dotted_border.svg);">
+              <p class="absolute top-[23px] left-[60px] font-Mono text-400 text-[18px] leading-[19.11px] text-[#CFFF0B] tracking-widest">Drop Logo here
+                or...
+              </p>
+              <button type="button"
+                class="absolute top-[74px] left-[50px] font-Mono font-bold text-[#242424] text-700 text-[20px] leading-[21.33px] bg-white flex space-x-[50px] items-center py-[18px] pl-[40px] pr-[25px] rounded-full">
+                <p>Upload</p>
+                <img src="./img/upload.svg" class="w-[19px] h-[22.93px]" alt="Upload" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="pt-[3px]">
+        <div class="flex items-center space-x-[21px] pt-[58px] pb-[38px]">
+          <p
+            class="flex justify-center items-center w-[35px] h-[35px] rounded-full bg-[#CFFF0B] text-center text-[#1E1E1E] font-Mono text-500 text-[16px] leading-[16.99px]">
+            3</p>
+          <p class="font-Mono text-500 text-[20px] leading-[27.33px] text-white tracking-widest">Select a Theme + Color
+            +
+            Music</p>
+        </div>
+        <div class="pt-[27.96px] grid grid-cols-3">
+          <div class="col-span-1 flex justify-start max-md:col-span-2">
+            <div class="flex flex-col items-center">
+              <img src="./img/landing_2.jpg" class=" w-[150x] h-[267px] rounded-[18px]" alt="landing_2" />
+              <p class="font-Mono text-500 text-[14px] leading-[14.86px] text-[#FFFFFF] tracking-[.35em] pt-[28px]">
+                CLASSICO</p>
+              <div class="flex-baseline justify-center items-center bottom-0 space-y-[22.5px]">
+                <div class="flex flex-row space-x-[32px] pt-[23.5px]">
+                  <button type="button"
+                    class="flex justify-center items-center rounded-full w-[51px] h-[51px] border-solid border-2 border-[#CFFF0B]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                      <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 12h14m-7-7l-7 7l7 7" />
+                    </svg>
+                  </button>
+                  <button type="button"
+                    class=" flex justify-center items-center rounded-full w-[51px] h-[51px] border-solid border-2 border-[#CFFF0B]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                      <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 12h14m-7-7l7 7l-7 7" />
+                    </svg>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-span-1 flex flex-col space-y-[23px] pl-[10px] max-md:col-span-1">
+            <div class="flex justify-start flex-col space-y-6">
+              <label for="radioButton1"
+                class="font-Mono text-400 text-[20px] leading-[21.23px] text-[#CFFF0B] tracking-widest">Primary
+                color</label>
+              <input id="radioButton1" type="radio" name="radioButtons" class="hidden" />
+              <label for="radioButton1" class="relative inline-block cursor-pointer">
+                <div
+                  class="w-[60px] h-[60px] rounded-full bg-[#4B4B4B] border-2 border-transparent flex items-center justify-center">
+                  <div id="circle1" class="w-[34px] h-[34px] rounded-full bg-[#1E3C32]"></div>
+                </div>
+              </label>
+            </div>
+
+            <div class="flex justify-start flex-col space-y-6">
+              <label for="radioButton2"
+                class="font-Mono text-400 text-[20px] leading-[21.23px] text-[#CFFF0B] tracking-widest">Secondary
+                color</label>
+              <input id="radioButton2" type="radio" name="radioButtons" class="hidden" />
+              <label for="radioButton2" class="relative inline-block cursor-pointer">
+                <div
+                  class="w-[60px] h-[60px] rounded-full bg-[#4B4B4B] border-2 border-transparent flex items-center justify-center">
+                  <div id="circle2" class="w-[34px] h-[34px] rounded-full bg-[#ffffff]"></div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="col-span-1 flex flex-col justify-start space-y-[20px] max-md:col-span-3 max-md:mt-[20px]">
+            <p class="font-Mono text-400 text-[20px] leading-[21.23px] text-[#CFFF0B] tracking-widest">Music Track</p>
+            <div class="space-y-[8px]">
+              <div class="flex items-center flex-row bg-[#4B4B4B] px-[10px] py-[13px] rounded-full max-md:justify-between">
+                <input id="radioButton3" type="radio" name="radioButtons" class="hidden" />
+                <label for="radioButton3" class="relative inline-block cursor-pointer">
+                  <div
+                    class="w-[34px] h-[34px] rounded-full bg-black border-2 border-transparent flex items-center justify-center mr-[20px]">
+                    <div id="music_1" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path fill="none" stroke="#CFFF0B" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="1.5" d="m2.75 8.75l3.5 3.5l7-7.5" />
+                      </svg>
+                    </div>
+                  </div>
+                </label>
+                <label for="radioButton3"
+                  class="font-Mono text-400 text-[20px] leading-[21.23px] text-[#CFFF0B] tracking-widest mr-[30px] ">Music
+                  1</label>
+                <div class="w-[32px] h-[32px] " id="sound_1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+                    <path fill="white"
+                      d="M426.7 256c0-71-43.4-131.8-105-157.5l-16.4 39.4C351.5 157.2 384 202.8 384 256c0 53.3-32.5 98.8-78.8 118.1l16.4 39.4C383.3 387.8 426.7 327 426.7 256m-85.4 0c0-35.5-21.7-65.9-52.5-78.7l-16.4 39.4c15.4 6.4 26.2 21.6 26.2 39.4c0 17.7-10.8 32.9-26.2 39.4l16.4 39.4c30.8-13 52.5-43.4 52.5-78.9m13.2-236.3L338 59.1C415.1 91.2 469.3 167.2 469.3 256c0 88.7-54.2 164.8-131.3 196.9l16.4 39.4C447 453.7 512 362.5 512 256S447 58.3 354.5 19.7M0 149.3v213.3h85.3L234.7 512V0L85.3 149.3z" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="flex items-center flex-row bg-[#4B4B4B] px-[10px] py-[13px] rounded-full max-md:justify-between">
+                <input id="radioButton4" type="radio" name="radioButtons" class="hidden" />
+                <label for="radioButton4" class="relative inline-block cursor-pointer">
+                  <div
+                    class="w-[34px] h-[34px] rounded-full bg-black border-2 border-transparent flex items-center justify-center mr-[20px]">
+                    <div id="music_2" class="hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path fill="none" stroke="#CFFF0B" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="1.5" d="m2.75 8.75l3.5 3.5l7-7.5" />
+                      </svg>
+                    </div>
+                  </div>
+                </label>
+                <label for="radioButton4"
+                  class="font-Mono text-400 text-[20px] leading-[21.23px] text-[#CFFF0B] tracking-widest mr-[30px] ">Music
+                  2</label>
+                <div class="w-[32px] h-[32px] " id="sound_2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+                    <path fill="#5d5d5d"
+                      d="M426.7 256c0-71-43.4-131.8-105-157.5l-16.4 39.4C351.5 157.2 384 202.8 384 256c0 53.3-32.5 98.8-78.8 118.1l16.4 39.4C383.3 387.8 426.7 327 426.7 256m-85.4 0c0-35.5-21.7-65.9-52.5-78.7l-16.4 39.4c15.4 6.4 26.2 21.6 26.2 39.4c0 17.7-10.8 32.9-26.2 39.4l16.4 39.4c30.8-13 52.5-43.4 52.5-78.9m13.2-236.3L338 59.1C415.1 91.2 469.3 167.2 469.3 256c0 88.7-54.2 164.8-131.3 196.9l16.4 39.4C447 453.7 512 362.5 512 256S447 58.3 354.5 19.7M0 149.3v213.3h85.3L234.7 512V0L85.3 149.3z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="flex items-center flex-row bg-[#4B4B4B] px-[10px] py-[13px] rounded-full max-md:justify-between">
+                <input id="radioButton5" type="radio" name="radioButtons" class="hidden" />
+                <label for="radioButton5" class="relative inline-block cursor-pointer">
+                  <div
+                    class="w-[34px] h-[34px] rounded-full bg-black border-2 border-transparent flex items-center justify-center mr-[20px]">
+                    <div id="music_3" class="hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path fill="none" stroke="#CFFF0B" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="1.5" d="m2.75 8.75l3.5 3.5l7-7.5" />
+                      </svg>
+                    </div>
+                  </div>
+                </label>
+                <label for="radioButton5"
+                  class="font-Mono text-400 text-[20px] leading-[21.23px] text-[#CFFF0B] tracking-widest mr-[30px] ">Music
+                  3</label>
+                <div class="w-[32px] h-[32px] " id="sound_3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+                    <path fill="#5d5d5d"
+                      d="M426.7 256c0-71-43.4-131.8-105-157.5l-16.4 39.4C351.5 157.2 384 202.8 384 256c0 53.3-32.5 98.8-78.8 118.1l16.4 39.4C383.3 387.8 426.7 327 426.7 256m-85.4 0c0-35.5-21.7-65.9-52.5-78.7l-16.4 39.4c15.4 6.4 26.2 21.6 26.2 39.4c0 17.7-10.8 32.9-26.2 39.4l16.4 39.4c30.8-13 52.5-43.4 52.5-78.9m13.2-236.3L338 59.1C415.1 91.2 469.3 167.2 469.3 256c0 88.7-54.2 164.8-131.3 196.9l16.4 39.4C447 453.7 512 362.5 512 256S447 58.3 354.5 19.7M0 149.3v213.3h85.3L234.7 512V0L85.3 149.3z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="flex items-center flex-row bg-[#4B4B4B] px-[10px] py-[13px] rounded-full max-md:justify-between">
+                <input id="radioButton6" type="radio" name="radioButtons" class="hidden" />
+                <label for="radioButton6" class="relative inline-block cursor-pointer">
+                  <div
+                    class="w-[34px] h-[34px] rounded-full bg-black border-2 border-transparent flex items-center justify-center mr-[20px]">
+                    <div id="music_4" class="hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path fill="none" stroke="#CFFF0B" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="1.5" d="m2.75 8.75l3.5 3.5l7-7.5" />
+                      </svg>
+                    </div>
+                  </div>
+                </label>
+                <label for="radioButton6"
+                  class="font-Mono text-400 text-[20px] leading-[21.23px] text-[#CFFF0B] tracking-widest mr-[30px] ">Music
+                  4</label>
+                <div class="w-[32px] h-[32px] " id="sound_4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+                    <path fill="#5d5d5d"
+                      d="M426.7 256c0-71-43.4-131.8-105-157.5l-16.4 39.4C351.5 157.2 384 202.8 384 256c0 53.3-32.5 98.8-78.8 118.1l16.4 39.4C383.3 387.8 426.7 327 426.7 256m-85.4 0c0-35.5-21.7-65.9-52.5-78.7l-16.4 39.4c15.4 6.4 26.2 21.6 26.2 39.4c0 17.7-10.8 32.9-26.2 39.4l16.4 39.4c30.8-13 52.5-43.4 52.5-78.9m13.2-236.3L338 59.1C415.1 91.2 469.3 167.2 469.3 256c0 88.7-54.2 164.8-131.3 196.9l16.4 39.4C447 453.7 512 362.5 512 256S447 58.3 354.5 19.7M0 149.3v213.3h85.3L234.7 512V0L85.3 149.3z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="flex items-center flex-row bg-[#4B4B4B] px-[10px] py-[13px] rounded-full max-md:justify-between">
+                <input id="radioButton7" type="radio" name="radioButtons" class="hidden" />
+                <label for="radioButton7" class="relative inline-block cursor-pointer">
+                  <div
+                    class="w-[34px] h-[34px] rounded-full bg-black border-2 border-transparent flex items-center justify-center mr-[10px]">
+                    <div id="music_5" class="hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path fill="none" stroke="#CFFF0B" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="1.5" d="m2.75 8.75l3.5 3.5l7-7.5" />
+                      </svg>
+                    </div>
+                  </div>
+                </label>
+                <label for="radioButton7"
+                  class="font-Mono text-400 text-[20px] leading-[21.23px] text-[#CFFF0B] tracking-widest mr-[20px] ">NO
+                  Music</label>
+                <div class="w-[32px] h-[32px]" id="sound_5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 15 15">
+                    <path fill="#5d5d5d"
+                      d="M9 1.5a.5.5 0 0 0-.757-.429L3.362 3.998H1.5c-.829 0-1.5.67-1.5 1.5V9.5c0 .829.67 1.5 1.5 1.5h1.862l4.88 2.929A.5.5 0 0 0 9 13.5zm4.208 5.996L14.62 8.91l-.707.707L12.5 8.203l-1.414 1.413l-.707-.707l1.414-1.413l-1.414-1.413l.707-.707L12.5 6.789l1.415-1.413l.706.707z" />
+                  </svg>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-[71px] flex justify-center items-center ">
+        <button type="button"
+          class="mt-[30px] font-Mono font-bold text-[#242424] text-500 text-[20px] leading-[21.23px] bg-gradient-to-r from-[#FF4089] to-[#CFFF0B] flex space-x-6 items-center py-[14px] px-[40px] rounded-[34px]">
+          <p>Payment + Let’s Refresh it!</p>
+          <img src="./img/arrow_slash.svg" class="w-[17.6px] h-[17.6px]" alt="arrow_slash" />
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="pl-[107px] pr-[49px] flex justify-between pt-[84px] pb-[58px]">
+    <div class="space-x-[22.61px] flex items-center">
+      <img src="./img/footer_image.svg" class=" inline-block  w-[25.39px] h-[24.38px] " alt="footerimage" />
+      <p class="font-Mono text-400 text-[16px] leading-[39.47px] text-white">© 2024 Freshlistingco. All rights reserved
+      </p>
+    </div>
+    <p class="font-Mono text-400 text-[16px] leading-[39.47px] text-white">terms + legal
+    </p>
+
+  </div>
+
+  <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+  <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+  <script src="./js/style.js"></script>
+
+</body>
+
+</html>
