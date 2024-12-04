@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="./test.css">
+    <title>Safe Home Pros</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-lignt">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+            <button class="btn btn-primary btn-logo ml-auto">Speak With An Expert</button>
+        </div>
+    </nav>
+
+    <div>
+        <div class="top-section">
+            <div class="top-left">
+                <div class="text1">Help Protect Your Home With A New Security System</div>
+                <div class="text2">Quick and easy. Get matched with the best Home Security company in your area.</div>
+            </div>
+            <div class="top-right">
+                <div class="card main-card">
+                    <div class="card-header">
+                        <div id="indicatorList" class="indicator-list"></div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="question-div-1  active-question">
+                                <div class="q-title">1. What type of property is this system for?</div>
+                                <div class="q-div">
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="form-check form-group">
+                                                <input class="form-check-input" id="iq11" type="radio" name="q-1"
+                                                    value="Owned" checked />
+                                                <label class="form-check-label" for="iq11">Owned</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="form-check form-group">
+                                                <input class="form-check-input" type="radio" name="q-1" value="Rented"
+                                                    id="iq12" />
+                                                <label class="form-check-label" for="iq12">Rented</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-div-2 question">
+                                <div class="q-title">2. What is your zip code?</div>
+                                <div class="q-div">
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="input-group form-group">
+                                                <span class="input-group-addon">
+                                                    <img src="./assets/Location Icon.svg" />
+                                                </span>
+                                                <input class="q-input form-control"
+                                                    placeholder="Enter your Zip code number" id="input_zip" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-div-3 question">
+                                <div class="q-title">3. What is your installation preference?</div>
+                                <div class="q-div">
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="form-check form-group">
+                                                <input class="form-check-input" id="iq31" type="radio" name="q-3"
+                                                    value="professional" checked />
+                                                <label class="form-check-label" for="iq31">Professional
+                                                    Installation</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="form-check form-group">
+                                                <input class="form-check-input" type="radio" name="q-3" value="self"
+                                                    id="iq32" />
+                                                <label class="form-check-label" for="iq32">Self
+                                                    Installation</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="form-check form-group">
+                                                <input class="form-check-input" type="radio" name="q-3" value="none"
+                                                    id="iq33" />
+                                                <label class="form-check-label" for="iq33">No Preferences</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-div-4 question">
+                                <div class="q-title">4. What home security features would you like to have? <p
+                                        class="d-inline">(Select answers
+                                        that are applicable to you.)</p>
+                                </div>
+                                <div class="q-div">
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="form-check form-group">
+                                                <input class="form-check-input" id="iq41" type="checkbox" name="q-4"
+                                                    value="Cameras" />
+                                                <label class="form-check-label" for="iq41">Cameras</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="form-check form-group">
+                                                <input class="form-check-input" id="iq42" type="checkbox" name="q-4"
+                                                    value="Motion Sensors" />
+                                                <label class="form-check-label" for="iq42">Motion Sensors</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="form-check form-group">
+                                                <input class="form-check-input" type="checkbox" name="q-4" value="Glass Break Sensors"
+                                                    id="iq43" />
+                                                <label class="form-check-label" for="iq43">Glass Break
+                                                    Sensors</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="form-check form-group">
+                                                <input class="form-check-input" type="checkbox" name="q-4" value="Doorbell Cameras"
+                                                    id="iq44" />
+                                                <label class="form-check-label" for="iq44">Doorbell
+                                                    Cameras</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-div-5 question">
+                                <div class="q-title">5. What kind of System do you need?</div>
+                                <div class="q-div">
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="form-check form-group">
+                                                <input class="form-check-input" type="radio" name="q-5" value="burglar"
+                                                    id="iq51" checked />
+                                                <label class="form-check-label" for="iq51">Burglar/Intrusion</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="form-check form-group">
+                                                <input class="form-check-input" type="radio" name="q-5" value="fire"
+                                                    id="iq52" />
+                                                <label class="form-check-label" for="iq52">Fire Detection</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="form-check form-group">
+                                                <input class="form-check-input" type="radio" name="q-5" value="both"
+                                                    id="iq53" />
+                                                <label class="form-check-label" for="iq53">Both Burglar & Fire
+                                                    Detection</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-div-6 question">
+                                <div class="q-title">6. How many entrances exist?</div>
+                                <div class="q-div">
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="form-check form-group">
+                                                <input class="form-check-input" type="radio" name="q-6" value="1"
+                                                    id="iq61" checked />
+                                                <label class="form-check-label" for="iq61">1</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="form-check form-group">
+                                                <input class="form-check-input" type="radio" name="q-6" value="2-4"
+                                                    id="iq62" />
+                                                <label class="form-check-label" for="iq62">2 - 4</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="form-check form-group">
+                                                <input class="form-check-input" type="radio" name="q-6" value="5"
+                                                    id="iq63" />
+                                                <label class="form-check-label" for="iq63">5</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="form-check form-group">
+                                                <input class="form-check-input" type="radio" name="q-6" value="6+"
+                                                    id="iq64" />
+                                                <label class="form-check-label" for="iq64">More than 5</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question-div-7 question">
+                                <div class="q-title">7. What is your address?</div>
+                                <div class="q-div">
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><img
+                                                        src="./assets/Location Icon.svg" /></span>
+                                                <input class="q-input form-control" placeholder="Enter your address" id="input_address" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question-div-8 question">
+                                <div class="q-title">8. Please fill in your details.</div>
+                                <div class="q-div">
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><img
+                                                        src="./assets/User Icon.svg" /></span>
+                                                <input id="input_first_name" type="text" class="q-input form-control"
+                                                    placeholder="First Name" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><img
+                                                        src="./assets/User Icon.svg" /></span>
+                                                <input id="input_last_name" type="text" class="q-input form-control"
+                                                    placeholder="Last Name" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><img
+                                                        src="./assets/Email Icon.svg" /></span>
+                                                <input id="input_email" class="q-input form-control"
+                                                    placeholder="Email Address" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card sub-card">
+                                        <div class="card-body">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><img
+                                                        src="./assets/Phone Icon.svg" /></span>
+                                                <input id="input_phone" class="q-input form-control"
+                                                    placeholder="Phone Number" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col d-flex justify-content-center">
+                                <button type="button" class="btn btn-prev" onclick="onPrevQuestion()" disabled>
+                                    <img src="./assets/Back Icon.svg" />
+                                    Go Back
+                                </button>
+                            </div>
+                            <div class="col d-flex justify-content-center">
+                                <button type="submit" class="btn btn-next" onclick="onNextQuestion()">
+                                    Next Question <img src="./assets/Next Icon.svg" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle-section">
+            <div class="title">How It Works</div>
+            <div class="sub-title">Safe Home Pros services hundreds of brands and provides trusted
+                information for millions of
+                individuals
+                across the United States</div>
+            <div class="d-flex mt-5 items">
+                <div class="item">
+                    <img src="./assets/Speaker Icon.svg" />
+                    <p class="item-text">Strengthen your consumer awareness</p>
+                </div>
+                <div class="item">
+                    <img src="./assets/People Icon.svg" />
+                    <p class="item-text">Easily compare competitors</p>
+                </div>
+                <div class="item">
+                    <img src="./assets/Money Bag Icon.svg" />
+                    <p class="item-text">Find the best rates for your financial needs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <div class="pros-content">
+                <p class="title">
+                    Safe Home Pros
+                </p>
+                <p class="content">
+                    Safe Home Pros offers ranking and reviews for the top companies in many verticals across different
+                    industries in the United States. We strive to remain both objective and informative, with the goal
+                    of
+                    giving our users the best experience. The opinions and the prices we represent on our site(s) are
+                    subject to change without notice. We are an independent, advertising-supported comparison service.
+                    The
+                    offers that appear on this site are from companies that compensate us. This compensation may impact
+                    how
+                    and where products appear on this site, including, for example, the order in which they may appear
+                    within the listing categories.
+                </p>
+            </div>
+            <div class="subscribe">
+                <h5 class="mb-5">Subscribe</h5>
+                <form>
+                    <div class="form-group">
+                        <input type="input" class="form-control" id="firstNameInput" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="emailInput" placeholder="Email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-subscribe">SUBSCRIBE</button>
+                </form>
+            </div>
+            <div class="company">
+                <h5 class="mb-5">Company</h5>
+                <p class="cursor-pointer">About Us</p>
+                <p>Careers</p>
+                <p>FAQs</p>
+                <p>Teams</p>
+                <p>Contact Us</p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="d-flex justify-content-between align-items-center px-3">
+            <p>Copyright &copy; 2023 Safe Home Pros</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                <li class="list-inline-item"><a href="#">Sales and Refunds</a></li>
+                <li class="list-inline-item"><a href="#">Legal</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./test.js"></script>
+</body>
+
+</html>
